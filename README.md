@@ -5,28 +5,8 @@ An end-to-end pipeline that extracts, cleans, loads, automates, predicts, and vi
 
 ## 📁 Project Folder Structure
 
-energy_etl_project/
-├── Extract.py
-├── Transform.py
-├── Load.py
-├── .gitignore
-├── README.md
-├── Docker/
-│ ├── Dockerfile
-│ └── docker-compose.yaml
-├── Prediction Model/
-│ ├── FastAPI.py
-│ ├── Streamlit.py
-│ └── model_training.py
-├── dags/
-│ └── energy_etl_dag.py
-├── data/
-│ └── processed/
-│ ├── germany_load.csv
-│ └── germany_generation.csv
-├── PowerBI/
-│ ├── dashboard_screenshot.png
-│ └── Energy_Insights_Report.pbix
+<img width="209" alt="image" src="https://github.com/user-attachments/assets/a8f4985c-39c4-4136-b33f-311ff32bd19d" />
+
 
 ---
 
@@ -73,7 +53,11 @@ The cleaned files are saved to `data/processed/`.
 
 ## ⏱️ Airflow Automation
 
-ETL tasks are orchestrated using Apache Airflow. The DAG (`dags/energy_etl_dag.py`) runs daily, and Docker Compose handles containerization for both MySQL and Airflow services.
+ETL tasks are orchestrated using Apache Airflow. The DAG (`dags/energy_etl_dag.py`) runs daily, and Docker Compose handles containerization for both MySQL and Airflow services. It also sends alert in case of failure.
+<img width="278" alt="image" src="https://github.com/user-attachments/assets/a34845d9-81a1-4882-b138-340e4fe22719" />
+<img width="234" alt="image" src="https://github.com/user-attachments/assets/82b9c4c0-d99d-40bc-9c06-c6a606f3ae7c" />
+
+
 
 ---
 
@@ -85,9 +69,11 @@ A regression model is trained using `model_training.py` based on:
 
 ### ✅ FastAPI
 The trained model is served via a FastAPI endpoint (`FastAPI.py`) for real-time prediction.
+<img width="488" alt="image" src="https://github.com/user-attachments/assets/b35d31cd-526c-49d1-bf2f-71d3bdc7f600" />
 
 ### 💻 Streamlit
 `Streamlit.py` allows users to input time + forecast values and receive predicted actual load instantly.
+<img width="383" alt="image" src="https://github.com/user-attachments/assets/7bb7e6e2-49dc-4712-b12c-d2e9c612dbde" />
 
 > **Note**: Model weights (`model.pkl`) are excluded from Git due to size.
 
