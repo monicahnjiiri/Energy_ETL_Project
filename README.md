@@ -36,7 +36,7 @@ We start by extracting data from raw CSV files using `Extract.py`. The script fo
 
 ## 🧹 Data Transformation
 
-`Transform.py` handles missing values (without using zero-filling), filters only German TSO regions, and separates the dataset into:
+`Transform.py` handles missing values , filters only German TSO regions, and separates the dataset into:
 - Forecasted Load
 - Actual Load
 - Actual Generation
@@ -47,7 +47,7 @@ The cleaned files are saved to `data/processed/`.
 
 ## 🗃️ Data Loading
 
-`Load.py` loads the transformed data into a MySQL database using `pymysql` for secure connection. Large file handling and `.env` secrets are excluded via `.gitignore`.
+`Load.py` loads the transformed data into a MySQL database using `pymysql` for secure connection. 
 
 ---
 
