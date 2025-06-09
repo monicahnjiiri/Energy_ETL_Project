@@ -1,0 +1,7 @@
+.env
+logs/
+*.log
+__pycache__/
+*.pyc
+Prediction Model/model.pkl
+data/raw/energy_raw.csv
